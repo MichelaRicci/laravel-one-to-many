@@ -15,6 +15,15 @@
             <input class="ms-2" type="text"  id="content" name="content" placeholder="Write a description of this project" required/>
             </div>
             <div class= "col d-flex m-3">
+                <label for="type_id">Choose type</label>
+                <select class="form-select" name="type_id" id="type_id">
+                    <option value="">None</option>
+                    @foreach($types as $type)
+                    <option value="{{ $type->id }}">{{ $type->label }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class= "col d-flex m-3">
                 <label for="github">Link github</label>
                 <input class="ms-2" type="text" id="github" name="github" placeholder="Link github" required />
             </div>

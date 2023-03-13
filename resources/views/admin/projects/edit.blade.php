@@ -14,8 +14,18 @@
                 </div>
 
                 <div class= "col d-flex m-3">
-                <label for="content">Content</label>
-                <input class="ms-2" type="text"  id="content" name="content" placeholder="Write a description of this project"/>
+                    <label for="content">Content</label>
+                    <input class="ms-2" type="text"  id="content" name="content" placeholder="Write a description of this project"/>
+                </div>
+
+                <div class= "col d-flex m-3">
+                    <label for="type_id">Choose type</label>
+                    <select class="form-select" name="type_id" id="type_id">
+                        <option value="">None</option>
+                        @foreach($types as $type)
+                        <option value="{{ $type->id }}">{{ $type->label }}</option>
+                        @endforeach
+                    </select>
                 </div>
 
                 <div class= "col d-flex m-3">
@@ -24,8 +34,8 @@
                 </div>
 
                 <div class= "col d-flex m-3">
-                <label for="image">Image</label>
-                <input class="ms-2" type="file"  id="image" name="image" />
+                    <label for="image">Image</label>
+                    <input class="ms-2" type="file"  id="image" name="image" />
                 </div>
                 
                 <div class= "col-12 d-flex m-3">
