@@ -43,8 +43,8 @@ class ProjectController extends Controller
         $data['slug'] = Str::slug($data['title'], '-');
 
         if (Arr::exists($data, 'image')) {
-            $img_url = Storage::put('projects', $data['image']);
-            $data['image'] = $img_url;
+            $image = Storage::put('projects', $data['image']);
+            $data['image'] = $image;
         }
         $project->fill($data);
 

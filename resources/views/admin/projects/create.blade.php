@@ -11,15 +11,15 @@
                 <input class="ms-2" type="text" name="title" id="title" placeholder="Title" required/>
             </div>
             <div class= "col d-flex m-3">
-            <label for="price">Content</label>
+            <label for="content">Content</label>
             <input class="ms-2" type="text"  id="content" name="content" placeholder="Write a description of this project" required/>
             </div>
             <div class= "col d-flex m-3">
-                <label for="series">Link github</label>
+                <label for="github">Link github</label>
                 <input class="ms-2" type="text" id="github" name="github" placeholder="Link github" required />
             </div>
             <div class= "col d-flex m-3">
-            <label for="price">Image</label>
+            <label for="image">Image</label>
             <input class="ms-2" type="file"  id="image" name="image" />
             </div>
             

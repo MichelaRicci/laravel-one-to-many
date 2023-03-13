@@ -8,11 +8,12 @@
         <div class="card mt-5">
           <div class="card-body text-center">
               <h1 class="card-title">{{ $project->title }}</h1>
+              <p>{{ $project->type?->label }}</p>    
               <p class="card-text">{{ $project->content }}</p>
               <a href="{{ $project->github }}" class="btn btn-primary">GitHub</a>
           </div>
           <figure class="text-center">
-              <img src="{{ asset('storage/' . $project->image) }}" class="img-fluid" alt="{{ $project->title }}">
+              <img src="{{ asset('storage/'.$project->image) }}" class="img-fluid" alt="{{ $project->title }}">
           </figure>
         </div>
         <div class="d-flex justify-content-center align-items-center mt-3 mb-5 gap-3">  

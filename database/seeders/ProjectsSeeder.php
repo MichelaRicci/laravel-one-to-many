@@ -20,7 +20,7 @@ class ProjectsSeeder extends Seeder
             $project = new Project();
             $project->title = $faker->name();
             $project->content = $faker->paragraph();
-            $project->image = $faker->imageUrl(250, 250);
+            //$project->image = $faker->imageUrl(250, 250);
             $project->github = $faker->url();
             $project->slug = Str::slug($project->title, '-');
             

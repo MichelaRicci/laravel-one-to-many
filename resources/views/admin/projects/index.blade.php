@@ -12,13 +12,15 @@
             @foreach ($projects as $project)
                 <div class="col-6 my-3" style="height: 400px;">
                     <a href="{{ route('admin.projects.show', $project['id']) }}" style="text-decoration: none; color:black">
-                        <div class="card d-flex flex-column-reverse align-items-center justify-content-between mb-3">                     
-                            <figure class="text-center">
-                                <img src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
-                            </figure>
+                        <div class="card d-flex flex-column align-items-center justify-content-between mb-3">  
                             <div class="text-center">
                                 <h1>Project {{ $project->title }}</h1>
-                            </div>
+                            </div>   
+                            <p>{{ $project->type?->label }}</p>                
+                            <figure class="text-center">
+                                <img src="{{ asset('storage/'.$project->image) }}" alt="{{ $project->title }}">
+                            </figure>
+
                         </div>
                     </a>
                     <div class="d-flex justify-content-center align-items-center mt-3 mb-5 gap-3">                     
