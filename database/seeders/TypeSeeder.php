@@ -20,7 +20,7 @@ class TypeSeeder extends Seeder
 
             $newType = new Type();
             $newType->label = $type;
-
+            
             $newType->save();
         }
     }
